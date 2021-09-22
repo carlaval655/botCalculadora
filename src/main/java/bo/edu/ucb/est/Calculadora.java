@@ -46,7 +46,7 @@ public class Calculadora extends TelegramLongPollingBot {
                 opcion = pantalla.eleccion(mensajeEnviado, update);
                 switch (opcion){
                     case 1:{
-                        mensajeEnviado.setText("Introduzca el primer numero: ");
+                        mensajeEnviado.setText("Introduzca el primer número: ");
                         try {
                             execute(mensajeEnviado);
                         } 
@@ -56,7 +56,7 @@ public class Calculadora extends TelegramLongPollingBot {
                     }
                     break;
                     case 2:{
-                        mensajeEnviado.setText("Funcionalidad no implementada. Intente otro dia. ");
+                        mensajeEnviado.setText("Funcionalidad no implementada. Intente otro día. ");
                         try {
                             execute(mensajeEnviado);
                             mostrarMenuInicio(update);
@@ -72,10 +72,10 @@ public class Calculadora extends TelegramLongPollingBot {
                 }
             }
             else{
-                if (mensajeEnviado.getText().equals("Introduzca el primer numero: ")){
+                if (mensajeEnviado.getText().equals("Introduzca el primer número: ")){
                 if(suma.validarNumero(update.getMessage().getText())==true){
                     suma.setNumero1(Integer.parseInt(update.getMessage().getText()));
-                    mensajeEnviado.setText("Introduzca el segundo numero: ");
+                    mensajeEnviado.setText("Introduzca el segundo número: ");
                     mensajeEnviado.setChatId(update.getMessage().getChatId().toString());
                     try {
                         execute(mensajeEnviado);
@@ -88,7 +88,7 @@ public class Calculadora extends TelegramLongPollingBot {
                     mostrarMenuInicio(update);
             }
                 else{
-                    if (mensajeEnviado.getText().equals("Introduzca el segundo numero: ")){
+                    if (mensajeEnviado.getText().equals("Introduzca el segundo número: ")){
                 if(suma.validarNumero(update.getMessage().getText())==true){
                     suma.setNumero2(Integer.parseInt(update.getMessage().getText()));
                     mensajeEnviado.setText("La suma es: "+suma.calcularSuma());

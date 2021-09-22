@@ -20,7 +20,7 @@ public class Pantalla {
         
     }
     public String enviarMenu (){
-        return "Bienvenido al Bot Calculadora.\nSeleccione una de las siguientes opciones: \n1. Sumar dos numeros. \n2. Calcular serie de fibonacci.";
+        return "Bienvenido al Bot Calculadora.\nSeleccione una de las siguientes opciones: \n1. Sumar dos números. \n2. Calcular serie de fibonacci.";
     }
     public int eleccion (SendMessage mensajeEnviado, Update update){
         int opcion=0;
